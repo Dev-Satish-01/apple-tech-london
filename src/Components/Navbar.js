@@ -23,7 +23,7 @@ export default function Navbar() {
 
   return (
     <>
-      <Box className="pad">
+      <Box className="selectDisable pad">
         <Flex
           justifyContent="space-between"
           paddingBlock={1}
@@ -31,9 +31,12 @@ export default function Navbar() {
           borderColor={color}
           alignItems="center"
           className="navbar"
+          boxShadow="0px 0px 10px rgba(255, 255, 255, 0.6)"
+          background="linear-gradient(90deg, rgba(251, 251, 251, 0.1) 0%, rgba(251, 251, 251, 0.1) 100%);"
+          backdropFilter={"blur(30px)"}
           marginInline={"auto"}
           position="fixed"
-          w={isSmallerThan800 ? "88%" : "100%"}
+          w="100%"
           zIndex={10}
         >
           <Text fontWeight="800" fontSize="2rem" color={color} p={3} pl={6}>
@@ -83,20 +86,20 @@ export default function Navbar() {
             <Menu>
               <MenuButton
                 as={IconButton}
-                color="black"
+                color={color}
                 aria-label="Options"
                 icon={<HamburgerIcon />}
                 variant="none"
                 width={"2rem"}
               />
-              <MenuList color="black">
+              <MenuList color={color}>
                 <MenuItem>
                   <Link fontSize="s" width="100%" fontWeight="600" href="/">
                     home
                   </Link>
                 </MenuItem>
                 <MenuItem>
-                  <Link fontSize="s" width="100%" fontWeight="600" href="/">
+                  <Link fontSize="s" width="100%" fontWeight="600" href="/about">
                     about
                   </Link>
                 </MenuItem>
