@@ -13,11 +13,8 @@ import {
 
 export default function BodyHome() {
     const [isSmallerThan900] = useMediaQuery("(max-width:900px)");
-
     const color = useColorModeValue('black', 'white');
-    const [isLargerThan900] = useMediaQuery("(min-width: 900px)");
-
-
+    
     return (
         <>
             {isSmallerThan900 ?

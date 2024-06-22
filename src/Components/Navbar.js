@@ -82,7 +82,10 @@ export default function Navbar() {
 
           </Box>
 
-          <Box mr={10} display={isSmallerThan800 ? "block" : "none"}>
+          <Box mr={10} display={isSmallerThan800 ? "flex" : "none"} alignItems="center">
+            <Button size='sm' onClick={toggleColorMode}>
+              {color === 'white' ? 'dark' : 'light'}
+            </Button>
             <Menu>
               <MenuButton
                 as={IconButton}
