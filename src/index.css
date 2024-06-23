@@ -3,6 +3,12 @@ html::-webkit-scrollbar {
     display: none;
 }
 
+html {
+    max-width: 100%;
+    overflow-x: hidden;
+
+}
+
 .selectDisable {
     -webkit-user-select: none;
     -khtml-user-select: none;

@@ -14,12 +14,14 @@ import {
   IconButton,
 } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
+import { useNavigate } from "react-router-dom";
 
 export default function Navbar() {
   const [isSmallerThan800] = useMediaQuery("(max-width:800px)");
 
   const { toggleColorMode } = useColorMode()
   const color = useColorModeValue('black', 'white')
+  const navigate = useNavigate();
 
   return (
     <>
@@ -54,7 +56,7 @@ export default function Navbar() {
               fontWeight="600"
               color={color}
               p={4}
-              href="/"
+              onClick={() => navigate('/')}
             >
               home
             </Link>
@@ -63,7 +65,7 @@ export default function Navbar() {
               fontWeight="600"
               color={color}
               p={4}
-              href="/"
+              onClick={() => navigate('/about')}
             >
               about
             </Link>
@@ -72,7 +74,7 @@ export default function Navbar() {
               fontWeight="600"
               color={color}
               p={4}
-              href="/contact"
+              onClick={() => navigate('/contact')}
             >
               contact
             </Link>
@@ -97,17 +99,17 @@ export default function Navbar() {
               />
               <MenuList color={color}>
                 <MenuItem>
-                  <Link fontSize="s" width="100%" fontWeight="600" href="/">
+                  <Link fontSize="s" width="100%" fontWeight="600" onClick={() => navigate('/')}>
                     home
                   </Link>
                 </MenuItem>
                 <MenuItem>
-                  <Link fontSize="s" width="100%" fontWeight="600" href="/about">
+                  <Link fontSize="s" width="100%" fontWeight="600" onClick={() => navigate('/about')}>
                     about
                   </Link>
                 </MenuItem>
                 <MenuItem>
-                  <Link fontSize="s" fontWeight="600" href="/contact" width="100%">
+                  <Link fontSize="s" width="100%" fontWeight="600" onClick={() => navigate('/contact')}>
                     contact
                   </Link>
                 </MenuItem>
