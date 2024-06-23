@@ -19,7 +19,7 @@ const FAQItems = (props) => {
     const { toggleColorMode } = useColorMode()
     const color = useColorModeValue('black', 'white')
     return (
-        <Box zIndex={"2"} justifyContent="space-between" pt={5} pl={10} pr={10} pb={5} borderRadius={8} border="3px solid rgba(240, 248, 255, 0.25);" width='90%' onClick={() => props.setFaq(!props.show)} cursor="pointer">
+        <Box zIndex={"2"} justifyContent="space-between" pt={5} pl={10} pr={10} pb={5} borderRadius={8} borderWidth="1px" borderColor={color} width='90%' onClick={() => props.setFaq(!props.show)} cursor="pointer">
             
             <Flex justifyContent="space-between">
                 <Image src="../images/bullet.png" mt="0.6rem" w="1rem" h="1rem" ml={isSmallerThan800 ? "-1.2rem" : 0} />

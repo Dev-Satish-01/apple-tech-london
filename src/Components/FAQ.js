@@ -19,17 +19,16 @@ export default function FAQ() {
     return (
         <Box
             position="absolute"
-            top="800"
+            top={isSmallerThan800 ? "1350" : "1600"}
             left="18"
-            w="90%"
+            w="100%"
         >
             <Box className="selectDisable" fontSize="3.2rem"
                 color={color} fontWeight={800}
                 textAlign='center'
-                ml={isSmallerThan800 ? '1.4rem !important' : '10rem'}
             >FAQ
             </Box>
-            <VStack mt="2rem" marginInline={isSmallerThan800 ? 0 : "5rem"} spacing={4} ml={isSmallerThan800 ? 0 : "12rem"}>
+            <VStack mt="2rem" marginInline={isSmallerThan800 ? 0 : "5rem"}>
                 <FAQItems
                     marginBottom="0 !important"
                     faq="I need help choosing the right service for my issue."

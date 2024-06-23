@@ -9,6 +9,7 @@ import {
     CardFooter,
     Image,
     useMediaQuery,
+    HStack,
 } from "@chakra-ui/react";
 
 export default function CardBox() {
@@ -18,21 +19,58 @@ export default function CardBox() {
     return (
         <Box
             position="relative"
-            top="2000"
-            left="200"
+            top={isSmallerThan900 ? "900" : "800"}
+            p={isSmallerThan900 ? "1rem" : "0"}
         >
-            <Card maxW="md" onClick={() => navigate('/iphone')}>
-                <Image
-                    objectFit='cover'
-                    src='https://media.fixmybrokenscreen.co.uk/assets/upload/products-category/images/iPhone__image_7a3e49c9ea447a9d555e70825da003d0.png'
-                    alt='iPhone'
-                />
-                <CardFooter>
-                    <Flex justify="center" w="100%">
-                        <Text>iPhone</Text>
-                    </Flex>
-                </CardFooter>
-            </Card>
+            <Box className="selectDisable"
+                color={color} fontWeight={800}
+                textAlign="center"
+                pb="15"
+                fontSize={isSmallerThan900 ? "2.2rem" : "3.2rem"}
+            >What can we fix for you?
+            </Box>
+            <HStack justifyContent="center" fontSize="m"
+              fontWeight="700">
+                <Card maxW="md" onClick={() => navigate('/iphone')} borderWidth="1px" borderColor={color}>
+                    <Image
+                        objectFit='cover'
+                        src='https://media.fixmybrokenscreen.co.uk/assets/upload/products-category/images/iPhone__image_7a3e49c9ea447a9d555e70825da003d0.png'
+                        alt='iPhone'
+                    />
+                    <CardFooter>
+                        <Flex justify="center" w="100%">
+                            <Text>iPhone</Text>
+                        </Flex>
+                    </CardFooter>
+                </Card>
+                <Card maxW="md" onClick={() => navigate('/ipad')} borderWidth="1px" borderColor={color}>
+                    <Image
+                        objectFit='cover'
+                        src='https://media.fixmybrokenscreen.co.uk/assets/upload/products-category/images/iPad__image_e1c708c41a19b49231519de16fc15484.png'
+                        alt='iPhone'
+                    />
+                    <CardFooter>
+                        <Flex justify="center" w="100%">
+                            <Text>iPad</Text>
+                        </Flex>
+                    </CardFooter>
+                </Card>
+                <Card maxW="md" onClick={() => navigate('/mac')} borderWidth="1px" borderColor={color}>
+                    <Image
+                        objectFit='cover'
+                        src='../images/mac.png'
+                        alt='iPhone'
+                        maxW="415"
+                    />
+                    <CardFooter>
+                        <Flex justify="center" w="100%">
+                            <Text>Mac</Text>
+                        </Flex>
+                    </CardFooter>
+                </Card>
+
+            </HStack>
+
         </Box>
     )
 }
