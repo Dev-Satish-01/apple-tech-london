@@ -1,5 +1,5 @@
 import React from "react";
-import { useColorMode, useColorModeValue } from "@chakra-ui/color-mode";
+import { useColorModeValue } from "@chakra-ui/color-mode";
 import {
     Box, VStack, useMediaQuery,
 } from "@chakra-ui/react";
@@ -8,14 +8,13 @@ import FAQItems from "./FAQItems";
 
 export default function FAQ() {
     const [isSmallerThan800] = useMediaQuery('(max-width:800px)')
+    const color = useColorModeValue('black', 'white')
     const [faq1, setFaq1] = useState(false);
     const [faq2, setFaq2] = useState(true);
     const [faq3, setFaq3] = useState(false);
     const [faq4, setFaq4] = useState(false);
     const [faq5, setFaq5] = useState(false);
-    const { toggleColorMode } = useColorMode()
-    const color = useColorModeValue('black', 'white')
-
+    
     return (
         <Box
             position="absolute"
@@ -28,7 +27,7 @@ export default function FAQ() {
                 textAlign='center'
             >FAQ
             </Box>
-            <VStack mt="2rem" marginInline={isSmallerThan800 ? 0 : "5rem"}>
+            <VStack mt="2rem" marginInline={isSmallerThan800 ? "0rem" : "5rem"}>
                 <FAQItems
                     marginBottom="0 !important"
                     faq="I need help choosing the right service for my issue."

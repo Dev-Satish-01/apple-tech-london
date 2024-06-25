@@ -1,22 +1,16 @@
 import React from 'react'
-import { useColorMode, useColorModeValue } from "@chakra-ui/color-mode";
+import { useColorModeValue } from "@chakra-ui/color-mode";
 import {
     Box,
     Image,
     Text,
     Flex,
     useMediaQuery,
-    useDisclosure,
     Collapse
 } from "@chakra-ui/react";
 
-function CollapseEx() {
-    const { isOpen, onToggle } = useDisclosure();
-}  
-
 const FAQItems = (props) => {
     const [isSmallerThan800] = useMediaQuery('(max-width:800px)')
-    const { toggleColorMode } = useColorMode()
     const color = useColorModeValue('black', 'white')
     return (
         <Box zIndex={"2"} justifyContent="space-between" pt={5} pl={10} pr={10} pb={5} borderRadius={8} borderWidth="1px" borderColor={color} width='90%' onClick={() => props.setFaq(!props.show)} cursor="pointer">
