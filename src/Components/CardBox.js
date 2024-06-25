@@ -21,8 +21,9 @@ export default function CardBox() {
             position="relative"
             top={isSmallerThan900 ? "900" : "800"}
             p={isSmallerThan900 ? "1rem" : "0"}
+            className="selectDisable"
         >
-            <Box className="selectDisable"
+            <Box
                 color={color} fontWeight={800}
                 textAlign="center"
                 pb="15"

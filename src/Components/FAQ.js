@@ -21,8 +21,9 @@ export default function FAQ() {
             top={isSmallerThan800 ? "1350" : "1600"}
             left="18"
             w="100%"
+            className="selectDisable"
         >
-            <Box className="selectDisable" fontSize="3.2rem"
+            <Box fontSize="3.2rem"
                 color={color} fontWeight={800}
                 textAlign='center'
             >FAQ

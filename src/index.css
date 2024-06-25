@@ -16,3 +16,9 @@ html {
     -o-user-select: none;
     user-select: none;
 }
+
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
