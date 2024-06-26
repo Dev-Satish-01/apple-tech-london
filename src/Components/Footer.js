@@ -12,7 +12,7 @@ export default function Footer() {
   return (
     <>
       {isSmallerThan900 ? <></>
-        : <Box position="absolute" top="2350" className="selectDisable" w="100%" py={10} borderTopWidth={1} borderTopColor={color} borderTopRadius={10}>
+        : <Box position="absolute" top="2350" id="#contact" className="selectDisable" w="100%" py={10} borderTopWidth={1} borderTopColor={color} borderTopRadius={10}>
           <Flex ml="9rem">
               <VStack w="50%" alignItems="left">
                 <Text fontWeight="800" fontSize="30">APPLE TECH LONDON</Text>
@@ -28,10 +28,10 @@ export default function Footer() {
               <Box w="50%">
                 <VStack alignItems="left">
                   <Text fontWeight="700" fontSize="20">quick links</Text>
-                  <Link fontSize="s" fontWeight="600" onClick={() => navigate('/')}>home</Link>
-                  <Link fontSize="s" fontWeight="600" onClick={() => navigate('/contact')}>contact</Link>
-                  <Link fontSize="s" fontWeight="600" onClick={() => navigate('/')}>repairs</Link>
-                  <Link fontSize="s" fontWeight="600" onClick={() => navigate('/')}>FAQ</Link>
+                  <Link fontSize="s" fontWeight="600" href='https://apple-tech-london-dev.vercel.app/#nav'>home</Link>
+                  <Link fontSize="s" fontWeight="600" href='https://apple-tech-london-dev.vercel.app/#contact'>contact</Link>
+                  <Link fontSize="s" fontWeight="600" href='https://apple-tech-london-dev.vercel.app/#fix'>repairs</Link>
+                  <Link fontSize="s" fontWeight="600" href='https://apple-tech-london-dev.vercel.app/#faq'>FAQ</Link>
                 </VStack>
               </Box>
           </Flex>
@@ -43,6 +43,7 @@ export default function Footer() {
         color={color}
         textAlign="center"
         py={8}
+        className="selectDisable"
       >
         © copyright {" "}
         <Text display="inline" fontWeight="800">

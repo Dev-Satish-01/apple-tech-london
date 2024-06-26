@@ -25,7 +25,7 @@ export default function Navbar() {
 
   return (
     <>
-      <Box className="selectDisable pad">
+      <Box className="selectDisable" id="nav"> 
         <Flex
           justifyContent="space-between"
           paddingBlock={1}

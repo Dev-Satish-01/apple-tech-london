@@ -22,6 +22,7 @@ export default function FAQ() {
             left="18"
             w="100%"
             className="selectDisable"
+            id="faq"
         >
             <Box fontSize="3.2rem"
                 color={color} fontWeight={800}

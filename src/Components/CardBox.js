@@ -22,6 +22,7 @@ export default function CardBox() {
             top={isSmallerThan900 ? "900" : "800"}
             p={isSmallerThan900 ? "1rem" : "0"}
             className="selectDisable"
+            id="fix"
         >
             <Box
                 color={color} fontWeight={800}
